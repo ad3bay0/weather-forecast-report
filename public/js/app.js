@@ -28,7 +28,8 @@ weatherForm.addEventListener('submit', (e) => {
 
             } else {
                 messageOne.textContent = '';
-                messageTwo.textContent = `The weather is ${data.forecast} in ${data.location}`;
+                messageTwo.textContent = `The weather in ${data.location} is ${data.forecast} at tempature at ${data.temperature} \xB0C`;
+                query.value ='';
             }
 
         });

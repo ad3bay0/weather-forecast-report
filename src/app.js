@@ -68,7 +68,7 @@ app.get('/weather',(req,res)=>{
             });
         }
 
-        forecast(longitude,latitude,(err,forecast)=>{
+        forecast(longitude,latitude,(err,{forecast,temperature}={})=>{
 
             if(err){
 
@@ -78,7 +78,8 @@ app.get('/weather',(req,res)=>{
             res.send({
                 forecast,
                 location,
-                address
+                address,
+                temperature
             });
 
         });
